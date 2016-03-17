@@ -67,6 +67,8 @@ def findSynonyms2(inputWord,letter):
             if word[0] == letter:
                 goodWords.append("1 - " + word)
 
+        printAll(goodWords)
+
 def findSynonyms(inputWord,letter):
     syn3 = []
     syn2 = []
@@ -116,6 +118,8 @@ def findSynonyms(inputWord,letter):
             """
             for word in syn3:
                 findSynonyms2(word,letter)
+        else:
+            printAll(goodWords)
 
 inputWord = raw_input("What word would you like to make?\n > ").lower()
 words = raw_input("Type " + str(len(inputWord)) + " words that describe it.\n > ").lower().split(" ")
